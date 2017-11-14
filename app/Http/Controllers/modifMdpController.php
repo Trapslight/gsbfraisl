@@ -9,14 +9,13 @@ class modifMdpController extends Controller
     public function affFormModifMdp()
     {
         $erreur='';
-        return view('formModifMdp','');
+        return view('formModifMdp', compact('erreur'));
     }
     
     public function verifMdp()
     {
         $erreur='';
-        $message='';
-        return view('formModifMdp.blade.php');
+        return redirect()->back()->with('status','Mise à jour Done !!!');
         // récup ex mdp
         
         //verifier mdp saisie = ex mdp

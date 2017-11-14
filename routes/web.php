@@ -52,9 +52,7 @@ Route::post('/validerFraisHorsForfait', 'FraisHorsForfaitController@validerFrais
 Route::get('/supprimerFraisHorsForfait/{idFrais}', 'FraisHorsForfaitController@supprimmerFraisHorsForfait');
 
 //Affiche le formulaire de ModifMdp
-Route::get('/modifMdp',function(){
-    return view('formModifMdp.blade.php');
-});
+Route::get('/modifMdp','modifMdpController@affFormModifMdp');
 
 //Modification mdp
 Route::post('/modifMdp','modifMdpController@verifMdp');
